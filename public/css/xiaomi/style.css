@@ -1,0 +1,172 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box; /* тем для подсчёта*/
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /*убрали точки слева*/
+}
+
+li {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none; /*убрали подчеркивание*/
+    color: inherit; /*наследование цвета у родителя*/
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #131313;
+}
+
+.header__inner {
+    display: flex; /* ставим в 1 строку*/
+    justify-content: space-between;  /* по разным сторонам разбрасывает */
+    align-items: center;  /* выравнивание */
+}
+
+.menu {
+    margin-right: 70px;
+}
+
+.menu__list {
+    display: flex; /* ставим в 1 строку*/
+}
+
+.menu__item  + .menu__item { /* ищет соседний селектор и задаёт соседу*/
+    padding-left: 10px;
+}
+
+.menu__link {
+    text-transform: uppercase;  /*Текст в большом case*/
+    padding: 43px 20px;
+    transition: all 0.3s; /*Плавность, посмотреть*/
+}
+
+.menu__link:hover {
+    background-color: #131313;
+    color: #fff;
+}
+
+.bike {
+    padding: 100px 0 150px;
+}
+
+.bike__inner {
+    display: flex;
+}
+
+.bike__column-slider {
+    flex-basis: 630px; /*уточнить*/
+    max-width: 630px;
+    margin-left: 30px;
+}
+
+.bike__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 60px 0 5px;
+}
+
+.bike__subtitle {
+    font-weight: 400;
+    margin: 0 0 60px;
+    color: #6f6f6f;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.bike__text {
+    max-width: 420px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.bike__link {
+    display: inline-block;
+    background-color: #131313;
+    color: white;
+    margin-top: 80px;
+    padding: 28px 81px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.1em; /*Расстояние между буквами*/
+}
+
+.bike__slider .slick-dots {
+    right: 0;
+    top: 50px;
+}
+
+.slick-dots {
+    position: absolute; /*в связке с right 0 располагает элемент справа сверху*/
+}
+
+.slick-dots + li {
+    padding-top: 10px;
+}
+
+.slick-dots button {
+    width: 2px;
+    height: 25px;
+    border-radius: 25px;
+    font-size: 0px;
+    padding: 0;
+    border: none;
+    background-color: #131313;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.slick-active button {
+    background-color: #ff4040;
+}
+
+.slick-active button:hover {
+    background-color: #ff4040;
+}
+
+.bike__list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.bike__list-item {
+    min-width: 160px;
+    display: flex; /*уточнить*/
+    flex-direction: column; /*уточнить*/
+    align-items: center;
+    text-align: center;
+    min-height: 58px;
+}
+
+.bike__list-number {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bike__list-text {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-right: auto 0; /*возможно стоит по другому делать*/
+}
+
