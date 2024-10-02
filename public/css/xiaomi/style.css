@@ -19,6 +19,10 @@ a {
     color: inherit; /*наследование цвета у родителя*/
 }
 
+p {
+    margin: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -169,4 +173,143 @@ body {
     text-transform: lowercase;
     margin-right: auto 0; /*возможно стоит по другому делать*/
 }
+
+.info {
+    margin-bottom: 150px;
+}
+
+.info__inner {
+    display: flex;
+}
+
+.info__img {
+    margin-right: 60px;
+    flex-basis: 570px;
+    object-fit: cover; /*растягивается изображение*/
+}
+
+.info__list {
+    flex-basis: 490px;
+}
+
+.info__item + .info__item {
+    padding-top: 50px;
+}
+
+.info__item-text {
+    max-width: 450px;
+    margin-bottom: 0;
+}
+
+.info__item-title {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.characteristics {
+    margin-bottom: 150px;
+}
+
+.characteristics__inner {
+    display: flex;
+}
+
+.characteristics__img {
+    align-self: center; /*уточнить*/
+}
+
+.characteristics__title {
+    padding: 2px 0 3px;
+    background-color: #131313;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.characteristics__line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-basis: 285px;
+}
+
+.characteristics__desc {
+    flex-basis: 285px;
+}
+
+.characteristics__items {
+    flex-basis: 570px;
+    margin-right: 60px;
+}
+
+.characteristics__head {
+    margin: 0 0 40px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.characteristics__list + .characteristics__list {
+    padding-top: 30px;
+}
+
+.slider {
+    margin-bottom: 50px;
+}
+
+.slider__items .slick-dots {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.slider__item {
+    padding-left: 50px;
+}
+
+.price {
+    margin-bottom: 100px;
+}
+
+.price__inner {
+
+}
+
+.price__form {
+    max-width: 450px;
+}
+
+.form__title {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.form__text {
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.form__input::placeholder {
+    color: #6f6f6f;
+    opacity: 0.5;
+}
+
+.form__text-color {
+
+}
+
 
