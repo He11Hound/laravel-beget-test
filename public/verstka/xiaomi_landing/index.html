@@ -23,13 +23,13 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="" class="menu__link">Описание</a>
+                        <a href="#info" class="menu__link">Описание</a>
                     </li>
                     <li class="menu__item">
-                        <a href="" class="menu__link">Характеристики</a>
+                        <a href="#characteristics" class="menu__link">Характеристики</a>
                     </li>
                     <li class="menu__item">
-                        <a href="" class="menu__link">Стоимость</a>
+                        <a href="#price" class="menu__link">Стоимость</a>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +76,7 @@
         </div>
     </div>
 </section>
-<section class="info">
+<section class="info" id="info">
     <div class="container">
         <div class="info__inner">
             <img src="../../assets/img/xiaomi/info.jpg" alt="" class="info__img">
@@ -140,7 +140,7 @@
     </div>
 </section>
 
-<section class="characteristics">
+<section class="characteristics" id="characteristics">
     <div class="container">
         <h4 class="characteristics__head">Характеристики</h4>
         <div class="characteristics__inner">
@@ -260,7 +260,7 @@
     </div>
 </div>
 
-<section class="price">
+<section class="price" id="price">
     <div class="container">
         <div class="price__inner">
             <form action="" class="price__form">
@@ -275,29 +275,29 @@
                     выберите желаемый цвет
                 </p>
                 <div class="form__label-box">
-                    <label for="" class="form__label">
-                        <input type="radio" name="" class="form__input-radio" id="">
+                    <label class="form__label">
+                        <input type="radio" class="form__input-radio" name="radio">
                         <div class="form__bike">
                             <img src="../../assets/img/xiaomi/bike-gray.jpg" alt="" class="form__bike-img">
-                            <p class="form__bike-price">32 990</p>
+                            <p class="form__bike-price"><span>32 990 руб</span></p>
                         </div>
                         <div class="form__radio-style form__radio-style--gray"></div>
                     </label>
 
-                    <label for="" class="form__label">
-                        <input type="radio" name="" class="form__input-radio" id="">
+                    <label class="form__label">
+                        <input type="radio" class="form__input-radio" checked name="radio">
                         <div class="form__bike">
                             <img src="../../assets/img/xiaomi/bike-white.jpg" alt="" class="form__bike-img">
-                            <p class="form__bike-price">33 990</p>
+                            <p class="form__bike-price"><span>33 990 руб</span></p>
                         </div>
                         <div class="form__radio-style form__radio-style--white"></div>
                     </label>
 
-                    <label for="" class="form__label">
-                        <input type="radio" name="" class="form__input-radio" id="">
+                    <label class="form__label">
+                        <input type="radio" class="form__input-radio"  name="radio">
                         <div class="form__bike">
                             <img src="../../assets/img/xiaomi/bike-red.jpg" alt="" class="form__bike-img">
-                            <p class="form__bike-price">34 990</p>
+                            <p class="form__bike-price"><span>34 990 руб</span></p>
                         </div>
                         <div class="form__radio-style form__radio-style--red"></div>
                     </label>
@@ -308,7 +308,31 @@
     </div>
 </section>
 
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <a href="" class="footer__link">Политика конфиденциальности</a>
+            <div class="footer__social">
+                <a href="" class="footer__social-link">
+                    <img class="footer__social-svg" src="../../assets/svg/xiaomi/inst.svg" alt="">
+                </a>
+                <a href="" class="footer__social-link">
+                    <img class="footer__social-svg" src="../../assets/svg/xiaomi/facebook.svg" alt="">
+                </a>
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:+380506777777" class="footer__contacts-link">
+                    <img src="../../assets/svg/xiaomi/phone.svg" alt="" class="footer__contacts-svg">
+                    <span>+38 050 677 77 77</span>
+                </a>
+                <a href="mailto:elektrobikeukr@gmail.com" class="footer__contacts-link">
+                    <img src="../../assets/svg/xiaomi/mail.svg" alt="" class="footer__contacts-svg">
+                    <span>elektrobikeukr@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../js/slick.min.js"></script>
