@@ -1,0 +1,65 @@
+.text {
+    /*padding: 20px;*/
+    /*margin: 20px;*/
+    border: 1px solid #000;
+    max-width: 1000px;
+    width: 200px;
+}
+
+
+.text:nth-child(1) { /*.первый элем*/
+    /*flex-grow: 1;*/
+
+}
+
+.text:nth-child(2) { /*.второй элем*/
+    /*flex-grow: 2;*/
+}
+
+img {
+    padding: 10px;
+}
+
+.box {
+    border: 3px solid #ccc;
+    margin: 50px;
+    display: flex;
+    height: 500px;
+    width: 900px;
+
+    /*align-items: center;*/
+
+    /*flex-direction - задаёт направление оси вдоль которой будут выставляться элементы*/
+    /*    По умолачанию row*/
+    /*    https://doka.guide/css/flex-direction/*/
+
+    /*justify-content - определяет, как браузер распределяет пространство между элементами контента и вокруг*/
+    /*    По умолчанию start*/
+    /*    https://doka.guide/css/justify-content/*/
+
+    /*flex-wrap - Флекс-элементы по умолчанию стараются уместиться в один ряд, даже если размер им не позволяет.*/
+    /*    Чтобы изменить это поведение, свойству flex-wrap нужно задать значение, отличное от nowrap*/
+    /*    https://doka.guide/css/flex-wrap/*/
+
+    /*align-items - Свойство для выравнивания элементов внутри контейнера по поперечной оси.*/
+    /*    align-items Робит с одной строкой*/
+    /*    https://doka.guide/css/align-items/*/
+
+    /*align-content - Тоже свойство выравнивания*/
+    /*    Используется когда в нашем flex box более 1 оси элементов*/
+
+    /*Часть 2*/
+
+    /*flex-basis - размер вдоль главной оси, вертикальной или горизонтальной, в зависимости от flex-direction*/
+    /*Свойство flex-basis указывает на размер элемента до того, как свободное место будет распределено*/
+    /*У большего значения flex-basis или width height больше приоритет */
+
+    /*flex-grow - коэфициент растяжения от оставшегося пространства*/
+    /*    https://doka.guide/css/flex-grow/*/
+
+    /*flex-shrink - коэфициент сжатия*/
+    /*Отсекает больше у элемента, чей параметр больше*/
+
+    /*flex: flex-grow flex-shrink flex-basis ;*/
+    /*flex: 0 1 auto;*/
+}
