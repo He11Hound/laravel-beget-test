@@ -14,7 +14,7 @@ class ArticleController extends Controller
 
     public function category($category)
     {
-        return 'index article';
+        return 'category article';
         return view('categoryArticle');
     }
 
