@@ -58,8 +58,7 @@ class ArticleResource extends Resource
                 Forms\Components\TagsInput::make('tags')->label('Тэги'),
                 Forms\Components\Select::make('category_id')->label('Категории')
                     ->options(static::categoryOptions())
-                    ->required()
-                    ->numeric(),
+                    ->required(),
                 Forms\Components\Toggle::make('active')->label('Активность')
                     ->required(),
             ]);

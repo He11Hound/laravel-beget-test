@@ -2,30 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\ArticleCategory;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-        return 'index article';
-        return view('indexArticle');
+        $articles = Article::where('active', true)->latest('updated_at')->paginate(3);
+        return view('article.index', compact('articles'));
     }
 
     public function category($category)
     {
-        return 'category article';
-        return view('categoryArticle');
+        $category = ArticleCategory::where('slug', $category)->firstOrFail();
+        $articles = Article::where('active', true)->where('category_id', $category->id)->latest('updated_at')->paginate(3);
+
+        return view('article.index', compact('articles', 'category'));
     }
 
     public function show($category, $article) {
-        return 'showArticle';
-        return  view('showArticle');
+        $article = Article::where('active', true)->where('slug', $article)->firstOrFail();
+        return view('article.show', compact('article'));
     }
 
     public function tag($tag) {
-        return 'tagArticle';
-        return  view('tagArticle');
+        $articles = Article::where('active', true)->whereJsonContains('tags', $tag)->latest('updated_at')->paginate(3);
+
+        return view('article.index', compact('articles', 'tag'));
+    }
+
+    public function search(Request $request) {
+        $query = $request->input('query');
+
+        if(!$query || $query == '') {
+            abort(404, 'Запрос не найден');
+        }
+
+        $articles = Article::where('title', 'like', '%' . $query . '%')
+            ->orWhere('detail_text', 'like', '%' . $query . '%')
+            ->paginate(6);
+
+        // toDo:rework
+
+        $pageTitle = 'Поиск: ' . $query;
+
+        return view('article.index', compact('articles', 'query', 'pageTitle'));
     }
 }
 
